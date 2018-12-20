@@ -20,6 +20,7 @@ enum HUDZOrder {
   CompassTooltip,
   PlacementMode,
   Crafting,
+  LiveScenarioScoreboard,
   Announcement,
   ReleaseControl,
   Progression,
