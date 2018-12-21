@@ -35,6 +35,12 @@ const UsingGameEvents = () => {
     };
   }, [foobarLog]); // ensure this effect is only updated when foobarLog changes
 
+  // the above example can be simplified a bit by returning the clear function directly e.g.
+  useEffect(() => game.on('foobar2', (data: any) => {
+    setFoobar(data);
+    setFoobarLog([...foobarLog, data]);
+  }).clear, [foobarLog]);
+
   // state for 'foobarField' form field data
   const [foobarField, setFoobarField] = useState('');
 
