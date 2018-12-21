@@ -4,7 +4,7 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
-import * as React from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'react-emotion';
 import { ErrorBoundary } from '@csegames/camelot-unchained/lib/components/ErrorBoundary';
@@ -43,6 +43,7 @@ import { TooltipView } from 'UI/Tooltip';
 import PassiveAlert from '../PassiveAlert';
 import { HUDContext, HUDContextState, defaultContextState, fetchSkills } from './context';
 import { uiContextFromGame } from 'services/session/UIContext';
+import ExampleHooks from 'components/EXAMPLES/ExampleHooks';
 
 const HUDNavContainer = styled('div')`
   position: fixed;
@@ -148,6 +149,7 @@ class HUD extends React.Component<HUDProps, HUDState> {
             <Watermark />
             <OfflineZoneSelect />
             <LoadingScreen />
+            <ExampleHooks />
           </div>
       </HUDContext.Provider>
       </UIContext.Provider>

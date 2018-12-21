@@ -27,8 +27,12 @@ import { ErrorBoundary } from '@csegames/camelot-unchained/lib/components/ErrorB
 import HUD from './components/HUD';
 import { apollo, store } from './services/session/reducer';
 import { ApolloProvider } from 'react-apollo';
+import { setConfig } from 'react-hot-loader';
 
 import './services/session/UIContext';
+
+// fix react-hot-loader to allow react hooks
+setConfig({ pureSFC: true });
 
 if (process.env.CUUI_HUD_ENABLE_WHY_DID_YOU_UPDATE) {
   // tslint:disable
