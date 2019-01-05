@@ -7,13 +7,24 @@
 import React from 'react';
 import UsingGameModels from './UsingGameModels';
 import UsingGameEvents from './UsingGameEvents';
+import UsingGraphQL from './UsingGraphQL';
 
 const ExampleHooks = () => {
   return (
-    <div style={{ width: '100%', height: '100%', background: 'white', position: 'absolute', zIndex: 99999999 }}>
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        background: 'white',
+        position: 'absolute',
+        overflow: 'scroll',
+        zIndex: 99999999,
+      }}
+    >
       <h1>Example Hooks API</h1>
       <UsingGameModels />
       <UsingGameEvents />
+      <UsingGraphQL />
     </div>
   );
 };
